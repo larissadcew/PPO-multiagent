@@ -1,16 +1,16 @@
-# Competitive Reinforcement Learning through Multi-Agent Proximal Policy Optimization
+# Aprendizado por Reforço Competitivo através da Otimização de Políticas Proximais Multi-Agente
 
-The chance to evaluate one's capabilities in the pursuit of achievement through competition is a beautiful thing.  Who doesn't relish the opportunity to take on a few friends in a fair game from time to time?  I myself particularly enjoy the challenge of a one-on-one basketball game, taking a stroll down memory lane by attempting to beat an old Nintendo 64 game, or even having a board game night with good company.  The process of continually improving performance over time is complex and enjoyable.  And it is achieved via the process of repitition, evaluation, and using subsequent insights to implement changes in approach.
+A oportunidade de avaliar as próprias habilidades em busca de conquistas por meio da competição é algo fascinante. Quem não aprecia a chance de desafiar amigos em um jogo justo de vez em quando? Pessoalmente, gosto muito do desafio de um jogo de basquete um a um, de relembrar bons momentos tentando vencer um antigo jogo de Nintendo 64, ou até mesmo de ter uma noite de jogos de tabuleiro com boa companhia. O processo de aprimorar continuamente o desempenho ao longo do tempo é complexo e prazeroso, sendo alcançado por meio de repetição, avaliação e aplicação de insights para modificar a abordagem.
 
-Well, what if this process could be implemented through Artificial Intelligence?  Could experience, evaluation, and policy optimization be used in order to train an agent to become otherworldy in a specific competitive domain?  This repository contains an implementation of an AI algorithm used in this exact pursuit.
+E se esse processo pudesse ser implementado com Inteligência Artificial? Poderíamos usar experiência, avaliação e otimização de políticas para treinar um agente a se destacar em um domínio competitivo específico? Este repositório contém uma implementação de um algoritmo de IA voltado exatamente para esse objetivo.
 
-## Details
+## Detalhes
 
-The above implementation utilizes a Multi-Agent Proximal Policy Optimization (MAPPO) algorithm in order to develop the expertise of agents in playing tennis!  This algorithm may be used in a variety of domains and is effective in its ability to produce an optimal methodology for realizing maximum reward.
+A implementação mencionada utiliza um algoritmo de Otimização de Políticas Proximais Multi-Agente (MAPPO) para desenvolver a habilidade de agentes em jogar tênis! Esse algoritmo pode ser aplicado em diversos domínios e é eficaz na criação de uma metodologia ideal para maximizar recompensas.
 
-The approach utilizes the power of Actor-Critic networks in order to optimize a policy and achieve expertise in a predefined domain.  Starting the process knowing nothing about what actions would lead to a positive or negative result, the algorithm initially samples and evaluates actions selected from an unoptimized Gaussian distribution.  After many iterations, the Critic network effectively evaluates each action result and provides meaningful information to the Actor so that it may optimize its action sampling distribution leading to better gameplay!
+A abordagem se baseia na potência das redes Actor-Critic para otimizar uma política e alcançar expertise em um domínio pré-definido. O processo começa sem conhecimento sobre quais ações levariam a resultados positivos ou negativos; o algoritmo inicialmente amostra e avalia ações selecionadas de uma distribuição Gaussiana não otimizada. Após várias iterações, a rede Crítica avalia efetivamente os resultados de cada ação e fornece informações valiosas ao Ator, permitindo que ele otimize sua distribuição de amostragem de ações, resultando em um melhor desempenho no jogo!
 
-In the environment, the state space consists of `8` variables that correspond to the position and velocity of the ball and the racket.  The action space consists of `2` continuous actions of moving toward or away from the net and jumping.  A reward of `+0.1` is gained each time an agent is able to hit the ball over the net.  If the agent allows the ball to touch the ground or if the agent hits the ball out of bounds, it receives a reward of `-0.01`.  This score allocation approach promotes the overall objective of keeping the ball in play.  The environment is considered solved once the mean maximum episodic reward reaches `+0.5` for the past 100 episodes.
+No ambiente, o espaço de estados é composto por 8 variáveis que correspondem à posição e velocidade da bola e da raquete. O espaço de ações consiste em 2 ações contínuas: mover-se em direção ou afastar-se da rede e pular. Um agente ganha uma recompensa de +0.1 cada vez que consegue passar a bola por cima da rede. Se o agente deixar a bola tocar o chão ou se acertar a bola para fora, recebe uma penalização de -0.01. Essa abordagem de alocação de pontuação promove o objetivo geral de manter a bola em jogo. O ambiente é considerado resolvido quando a média da recompensa episódica máxima atinge +0.5 nos últimos 100 episódios.
 
 <br />
 
@@ -20,8 +20,8 @@ In the environment, the state space consists of `8` variables that correspond to
 
 <br />
 
-## Results
-In the `saved_files` directory, you may find the saved model weights and learning curve plots for the successful Actor-Critic networks.  The trained agents were able to solve the environment within 6,000 episodes utilizing the MAPPO training algorithm.  The graph below depicts the agents' performance over time in terms of relative score averaged over the past 100 episodes.
+## Resultados
+No diretório saved_files, você encontrará os pesos do modelo salvo e gráficos da curva de aprendizado das redes Actor-Critic bem-sucedidas. Os agentes treinados conseguiram resolver o ambiente em 6.000 episódios utilizando o algoritmo de treinamento MAPPO. O gráfico abaixo mostra o desempenho dos agentes ao longo do tempo em termos de pontuação relativa média nos últimos 100 episódios.
 
 <br />
 
@@ -31,7 +31,7 @@ In the `saved_files` directory, you may find the saved model weights and learnin
 
 <br />
 
-## Dependencies
+## Dependências
 In order to run the above code, you will have to set up and activate a customized Python 3.6 environment.  You may follow the directions [here](https://github.com/udacity/deep-reinforcement-learning#dependencies) for setup instructions.
 
 Next, click the link corresponding to your operating system below which will download the respective UnityEnvironment.  You may then save the resulting file directly inside of your cloned repository in order to run the code.
